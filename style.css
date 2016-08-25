@@ -169,3 +169,17 @@ footer {
 .input-field::-webkit-input-placeholder {
     color: white;
 }
+
+
+
+/***************************** MEDIA QUERIES ******************************/
+
+/*landscape*/
+@media (min-width: 580px) and (max-width: 767px) {
+
+}
+/*portrait*/
+@media (min-width: 320px) and (max-width: 579px) {
+
+}
+
