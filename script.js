@@ -32,7 +32,7 @@ app.controller('landingController', function($scope){
         if (item_name.val() == "" || item_qty.val() == "") {
 
             if (item_name.val() == ""){
-                item_name.css({"background-color": "red").addClass("input-field").attr("placeholder", "Please enter a" +
+                item_name.css("background-color", "red").addClass("input-field").attr("placeholder", "Please enter a" +
                     " valid item");
             }
             else if (item_qty.val() == "" || item_qty.val() == isNaN){

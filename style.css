@@ -173,13 +173,22 @@ footer {
 
 
 /***************************** MEDIA QUERIES ******************************/
+/*portrait*/
+@media (min-width: 320px) and (max-width: 579px) {
+    .main-heading {
+        margin-top: 0;
+        font-size: 4vh;
+    }
+
+    .main_nav > li {
+        padding: 0 5vw;
+    }
+}
+
 
 /*landscape*/
 @media (min-width: 580px) and (max-width: 767px) {
 
 }
-/*portrait*/
-@media (min-width: 320px) and (max-width: 579px) {
 
-}
 
