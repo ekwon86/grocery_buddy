@@ -1,0 +1,31 @@
+<div class="grocery-list">
+    <table>
+        <tr>
+            <th class="items">Item Name</th>
+            <th class="cost">Qty.</th>
+            <th class="quantity">Est. Cost Per Item</th>
+            <th class="totalcost">Est. Total Cost</th>
+        </tr>
+        <tr  data-ng-repeat="item in items">
+            <td>{{ item.name }}</td>
+            <td>{{ item.qty }}</td>
+            <td></td>
+            <td></td>
+            <td class="cancel"><i class="fa fa-times" aria-hidden="true"></i></td>
+        </tr>
+
+    </table>
+
+</div>
+
+<form>
+    <input type="text" placeholder="What Do You Need?" class="item-name">
+    <input type="number" placeholder="Qty."  name="quantity" min="1" max="9999999"
+           class="item-qty">
+</form>
+
+<div class="button-container">
+    <button id="additem-button" ng-click="addItem()">Add Item <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    </button>
+</div>
+

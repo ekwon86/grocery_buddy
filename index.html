@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="groceryApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Buddy</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!--Google Fonts-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico">
+
+    <!--Font Awesome Icons CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Angular CDN with Angular routing CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+
+    <!--FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <!--Scripts-->
+    <script src="script.js"></script>
+</head>
+
+<body ng-controller="landingController">
+
+<header>
+    <h1 class="main-heading">Grocery Buddy</h1>
+
+    <ul class="main_nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header>
+
+<div data-ng-view></div>
+
+<footer>
+    <p>©2016 Eugene Kwon</p>
+</footer>
+</body>
+
+
+</html>

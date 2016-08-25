@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: 'Quicksand', serif;
+    /*background: url('images/background.jpg') no-repeat;*/
+    background-color: #e68700;
+    background-size: 100%;
+}
+
+.main-heading {
+    width: 100%;
+    font-family: 'Pacifico', serif;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+
+.main_nav {
+    text-align: center;
+    padding: 0;
+}
+
+.main_nav > li {
+    width: 100%;
+    list-style-type: none;
+    display: inline;
+    padding: 2em;
+}
+
+a:link {
+    font-size: 1em;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.5s ease;
+}
+
+a:hover {
+    color: #55acee;
+}
+
+.headings {
+    width: 100%;
+    text-align: center;
+}
+
+.text-container {
+    width: 100%;
+    text-align: center;
+    padding: 0 10vw;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list > li {
+    padding: 1vh 0;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+}
+
+input {
+    height: 5vh;
+    width: 55vw;
+    color: black;
+    font-size: 3vh;
+    margin-top: 2%;
+    padding: 4vh;
+    text-align: center;
+    display: inline-block;
+}
+
+.item-name {
+    width: 40vw;
+}
+
+.item-qty {
+    width: 10vw;
+}
+
+.grocery-list {
+    width: 100%;
+    text-align: center;
+    min-height: 5vh;
+    height: auto;
+    font-size: 3vh;
+    padding: 2vh;
+    background-color: white;
+    overflow: auto;
+}
+
+.cancel {
+    text-align: center;
+    border: none;
+}
+
+.cancel > i {
+    border: none;
+}
+
+.cancel >i:hover {
+    color: #ff5d2b;
+}
+
+.cancel >i:active{
+    color: red;
+}
+
+tbody {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table * {
+    color: black;
+    text-align: left;
+    padding: 1%;
+    font-size: 0.9em;
+}
+
+.items {
+    width: 70%;
+    border-bottom: 1px solid #aeaeae;
+}
+
+.quantity, .cost, .totalcost {
+    width: 10%;
+    border-bottom: 1px solid #aeaeae;
+}
+
+.button-container {
+    width: 100%;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+#additem-button {
+    color: white;
+    width: 13vw;
+    height: 8vh;
+    border-radius: 5%;
+    background-color: #19e5f3;
+    font-size: 1em;
+}
+
+button:focus {
+    outline: none;
+}
+
+footer {
+    margin-top: 11%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.input-field::-webkit-input-placeholder {
+    color: white;
+}
