@@ -1,4 +1,4 @@
-/************ Angular Modules *************/
+/********************** Routing **********************/
 var app = angular.module("groceryApp", ['ngRoute']);
 
 app.config(function($routeProvider){
@@ -10,7 +10,7 @@ app.config(function($routeProvider){
         })
         .when('/about', {
             templateUrl: "about.html",
-            controller: "aboutController"
+            controller: "landingController"
         })
         .when('/contact', {
             templateUrl: "contact.html",
@@ -21,11 +21,20 @@ app.config(function($routeProvider){
         });
 });
 
-app.controller('landingController', function($scope){
 
-    $scope.items = [];
+/********************** Controllers **********************/
+app.controller('landingController', function(groceryFactory){
 
-    $scope.addItem = function() {
+    this.addItem() 
+
+});
+
+/********************** Factory Creation **********************/
+app.factory("groceryFactory", function() {
+   
+    this.items = [];
+    
+    this.addItem = function() {
         var item_name = $('.item-name');
         var item_qty = $('.item-qty');
 
@@ -51,9 +60,11 @@ app.controller('landingController', function($scope){
         $('.item-name, .item-qty').css({
                 "background-color": "white"})
             .removeClass('input-field').val('').first().focus();
-
-
-    };
-
+        
+    }; 
+    
+    this.remove = function() {
+        
+    }
+    
 });
-

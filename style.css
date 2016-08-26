@@ -1,9 +1,15 @@
+html {
+    height: 100%
+}
+
 * {
     box-sizing: border-box;
     color: white;
 }
 
 body {
+    height: 100%;
+    padding-bottom:120px;
     font-family: 'Quicksand', serif;
     /*background: url('images/background.jpg') no-repeat;*/
     background-color: #e68700;
@@ -134,7 +140,7 @@ table * {
     border-bottom: 1px solid #aeaeae;
 }
 
-.quantity, .cost, .totalcost {
+.quantity, .cost, .totalcost, .remove {
     width: 10%;
     border-bottom: 1px solid #aeaeae;
 }
@@ -159,10 +165,10 @@ button:focus {
 }
 
 footer {
-    margin-top: 11%;
+    /*margin-top: 11%;*/
     width: 100%;
     text-align: center;
-    position: relative;
+    position: fixed;
     bottom: 0;
 }
 
@@ -182,6 +188,45 @@ footer {
 
     .main_nav > li {
         padding: 0 5vw;
+    }
+
+    input {
+        font-size: 2vh;
+        padding: 2vh;
+    }
+
+    .item-qty {
+        width: 18vw;
+    }
+
+    .item-name {
+        width: 55vw;
+    }
+
+    .button-container {
+        margin-top: 1vh;
+    }
+
+    #additem-button {
+        height: 6vh;
+        font-size: 2vh;
+        width: 42vw;
+    }
+
+    footer {
+        font-size: 2vh;
+    }
+
+    th {
+        font-size: 1vh;
+    }
+
+    .items {
+        width: 30%;
+    }
+
+    .quantity, .cost, .totalcost {
+        width: 17%;
     }
 }
 

@@ -5,13 +5,14 @@
             <th class="cost">Qty.</th>
             <th class="quantity">Est. Cost Per Item</th>
             <th class="totalcost">Est. Total Cost</th>
+            <th class="remove">Remove Item</th>
         </tr>
         <tr  data-ng-repeat="item in items">
             <td>{{ item.name }}</td>
             <td>{{ item.qty }}</td>
             <td></td>
             <td></td>
-            <td class="cancel"><i class="fa fa-times" aria-hidden="true"></i></td>
+            <td class="cancel" ng-click="remove()"><i class="fa fa-times" aria-hidden="true"></i></td>
         </tr>
 
     </table>
