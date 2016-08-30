@@ -5,14 +5,17 @@
             <th class="cost">Qty.</th>
             <th class="quantity">Est. Cost Per Item</th>
             <th class="totalcost">Est. Total Cost</th>
-            <th class="remove">Remove Item</th>
         </tr>
-        <tr ng-repeat="i in items">
-            <td>{{ i.name }}</td>
-            <td>{{ i.qty }}</td>
+        <tr  data-ng-repeat="item in items">
+            <td>{{ item.name }}</td>
+            <td>{{ item.qty }}</td>
             <td></td>
             <td></td>
-            <td class="cancel" ng-click="remove()"><i class="fa fa-times" aria-hidden="true"></i></td>
+            <td class="cancel">
+                <div ng-click="removeItem(item)">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </td>
         </tr>
 
     </table>
@@ -26,8 +29,8 @@
 </form>
 
 <div class="button-container">
-    <button id="additem-button" ng-click="addToCart()">Add Item <i class="fa fa-shopping-cart"
-                                                                      aria-hidden="true"></i>
+    <button id="additem-button" ng-click="addItem()">Add Item <i class="fa fa-shopping-cart" aria-hidden="true"></i>
     </button>
 </div>
+
 

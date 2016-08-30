@@ -1,4 +1,4 @@
-/********************** Routing **********************/
+/************ Angular Modules *************/
 var app = angular.module("groceryApp", ['ngRoute']);
 
 app.config(function($routeProvider){
@@ -10,7 +10,7 @@ app.config(function($routeProvider){
         })
         .when('/about', {
             templateUrl: "about.html",
-            controller: "landingController"
+            controller: "aboutController"
         })
         .when('/contact', {
             templateUrl: "contact.html",
@@ -21,58 +21,42 @@ app.config(function($routeProvider){
         });
 });
 
+app.controller('landingController', function($scope){
 
-/********************** Controllers **********************/
-app.controller('landingController', function($scope, groceryFactory){
-    $scope.init = function() {
-        groceryFactory.getItems();
-    };
+    $scope.items = [];
 
-    $scope.init();
-
-    $scope.addToCart = function () {
-        groceryFactory.addItem();
-    };
-
-});
-
-/********************** Factory Creation **********************/
-app.factory("groceryFactory", function() {
-    var factory = {};
-    
-    var items = [];
-
-    factory.addItem = function() {
+    $scope.addItem = function() {
         var item_name = $('.item-name');
         var item_qty = $('.item-qty');
-        var item_obj = {};
 
-            if (item_name.val() == "" || item_qty.val() == "") {
+        if (item_name.val() == "" || item_qty.val() == "") {
 
-                if (item_name.val() == ""){
-                    item_name.css("background-color", "red").addClass("input-field").attr("placeholder", "Please enter a" +
-                        " valid item");
-                }
-                else if (item_qty.val() == "" || item_qty.val() == isNaN){
-                    item_qty.css("background-color", "red").addClass("input-field");
-                }
-
-                return;
+            if (item_name.val() == ""){
+                item_name.css("background-color", "red").addClass("input-field").attr("placeholder", "Please enter a" +
+                    " valid item");
+            }
+            else if (item_qty.val() == "" || item_qty.val() == isNaN){
+                item_qty.css("background-color", "red").addClass("input-field");
             }
 
+            return;
+        }
+
+        var item_obj = {};
         item_obj.name = item_name.val();
         item_obj.qty = item_qty.val();
-        items.push(item_obj);
+        $scope.items.push(item_obj);
+
         item_name.attr("placeholder", "What Else Do You Need?");
         $('.item-name, .item-qty').css({
                 "background-color": "white"})
             .removeClass('input-field').val('').first().focus();
     };
 
-
-    factory.getItems = function() {
-        return items;
+    $scope.removeItem = function(item) {
+        var index = $scope.items.indexOf(item);
+        $scope.items.splice(index,1);
     };
 
-    return factory;
 });
+

@@ -108,15 +108,15 @@ input {
     border: none;
 }
 
-.cancel > i {
+.cancel i {
     border: none;
 }
 
-.cancel >i:hover {
+.cancel i:hover {
     color: #ff5d2b;
 }
 
-.cancel >i:active{
+.cancel i:active{
     color: red;
 }
 
@@ -165,7 +165,7 @@ button:focus {
 }
 
 footer {
-    width: 100%;
+     width: 100%;
     text-align: center;
     position: fixed;
     bottom: 0;
