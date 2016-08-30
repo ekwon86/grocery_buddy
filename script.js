@@ -21,11 +21,21 @@ app.config(function($routeProvider){
         });
 });
 
-app.controller('landingController', function($scope){
+app.controller('landingController', function($scope, $http, $log){
 
     $scope.items = [];
+    
 
     $scope.addItem = function() {
+        $http({
+            url: "http://www.recipepuppy.com/api/",
+            type: "GET"
+        }).then(function(response) {
+            console.log(response);
+        }, function(response) {
+            console.log(response, 'There was an error retrieving the data.')
+        });
+
         var item_name = $('.item-name');
         var item_qty = $('.item-qty');
 
