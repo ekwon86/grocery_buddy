@@ -93,7 +93,7 @@ input {
 }
 
 .grocery-list {
-    width: 100%;
+    width: 70vw;
     text-align: center;
     min-height: 5vh;
     height: auto;
@@ -101,6 +101,9 @@ input {
     padding: 2vh;
     background-color: white;
     overflow: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .cancel {

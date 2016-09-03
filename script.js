@@ -21,7 +21,7 @@ app.config(function($routeProvider){
         });
 });
 
-app.controller('landingController', function($scope, $http, $log){
+app.controller('landingController', function($scope, $http){
 
     $scope.items = [];
     
