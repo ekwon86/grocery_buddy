@@ -21,29 +21,21 @@ app.config(function($routeProvider){
         });
 });
 
-app.controller('landingController', function($scope, $http){
-
+app.controller('landingController', function($scope){
     $scope.items = [];
     var empty_cart = $(".empty-cart");
+    var item_name = $('.item-name');
+    var item_qty = $('.item-qty');
+
 
     $scope.addItem = function() {
+        var item_obj = {};
+        item_obj.name = item_name.val();
+        item_obj.qty = item_qty.val();
 
         empty_cart.hide();
-        
-        // $http({
-        //     url: "http://www.recipepuppy.com/api/",
-        //     type: "GET"
-        // }).then(function(response) {
-        //     console.log(response);
-        // }, function(response) {
-        //     console.log(response, 'There was an error retrieving the data.')
-        // });
-
-        var item_name = $('.item-name');
-        var item_qty = $('.item-qty');
 
         if (item_name.val() == "" || item_qty.val() == "") {
-
             if (item_name.val() == ""){
                 item_name.css("background-color", "red").addClass("input-field").attr("placeholder", "Please enter a" +
                     " valid item");
@@ -51,12 +43,9 @@ app.controller('landingController', function($scope, $http){
             else if (item_qty.val() == "" || item_qty.val() == isNaN){
                 item_qty.css("background-color", "red").addClass("input-field");
             }
-
             return;
         }
-        var item_obj = {};
-        item_obj.name = item_name.val();
-        item_obj.qty = item_qty.val();
+
         $scope.items.push(item_obj);
 
         item_name.attr("placeholder", "What Else Do You Need?");
