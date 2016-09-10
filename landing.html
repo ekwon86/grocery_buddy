@@ -6,6 +6,9 @@
             <th class="quantity">Est. Cost Per Item</th>
             <th class="totalcost">Est. Total Cost</th>
         </tr>
+        <tr class="empty-cart">
+            <td>Your shopping cart is empty. Please add an valid item and quantity below. </td>
+        </tr>
         <tr  data-ng-repeat="item in items">
             <td>{{ item.name }}</td>
             <td>{{ item.qty }}</td>

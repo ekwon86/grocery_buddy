@@ -1,4 +1,4 @@
-/************ Angular Modules *************/
+/************ Angular Moxdules *************/
 var app = angular.module("groceryApp", ['ngRoute']);
 
 app.config(function($routeProvider){
@@ -24,17 +24,20 @@ app.config(function($routeProvider){
 app.controller('landingController', function($scope, $http){
 
     $scope.items = [];
-    
+    var empty_cart = $(".empty-cart");
 
     $scope.addItem = function() {
-        $http({
-            url: "http://www.recipepuppy.com/api/",
-            type: "GET"
-        }).then(function(response) {
-            console.log(response);
-        }, function(response) {
-            console.log(response, 'There was an error retrieving the data.')
-        });
+
+        empty_cart.hide();
+        
+        // $http({
+        //     url: "http://www.recipepuppy.com/api/",
+        //     type: "GET"
+        // }).then(function(response) {
+        //     console.log(response);
+        // }, function(response) {
+        //     console.log(response, 'There was an error retrieving the data.')
+        // });
 
         var item_name = $('.item-name');
         var item_qty = $('.item-qty');
@@ -51,7 +54,6 @@ app.controller('landingController', function($scope, $http){
 
             return;
         }
-
         var item_obj = {};
         item_obj.name = item_name.val();
         item_obj.qty = item_qty.val();
@@ -66,6 +68,10 @@ app.controller('landingController', function($scope, $http){
     $scope.removeItem = function(item) {
         var index = $scope.items.indexOf(item);
         $scope.items.splice(index,1);
+
+        if ($scope.items == "") {
+            empty_cart.show();
+        }
     };
 
 });

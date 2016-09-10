@@ -16,13 +16,21 @@ body {
     background-size: 100%;
 }
 
-.main-heading {
-    width: 100%;
-    font-family: 'Pacifico', serif;
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 1px black;
+/*.main-heading {*/
+    /*width: 100%;*/
+    /*font-family: 'Pacifico', serif;*/
+    /*font-size: 50px;*/
+    /*color: white;*/
+    /*text-align: center;*/
+    /*text-shadow: 1px 1px 1px black;*/
+/*}*/
+
+#logo {
+    width: 600px;
+    height: 135px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
 }
 
 .main_nav {
@@ -34,7 +42,7 @@ body {
     width: 100%;
     list-style-type: none;
     display: inline;
-    padding: 2em;
+    padding: 1em;
 }
 
 a:link {
@@ -74,10 +82,10 @@ form {
 }
 
 input {
-    height: 5vh;
+    height: 15px;
     width: 55vw;
     color: black;
-    font-size: 3vh;
+    font-size: 15px;
     margin-top: 2%;
     padding: 4vh;
     text-align: center;
@@ -97,8 +105,8 @@ input {
     text-align: center;
     min-height: 5vh;
     height: auto;
-    font-size: 3vh;
-    padding: 2vh;
+    font-size: 15px;
+    padding: 1%;
     background-color: white;
     overflow: auto;
     position: relative;
@@ -159,8 +167,12 @@ table * {
     width: 13vw;
     height: 8vh;
     border-radius: 5%;
-    background-color: #19e5f3;
+    background-color: #1fb9de;
     font-size: 1em;
+}
+
+button:active {
+    color: #1e95b6;
 }
 
 button:focus {
@@ -176,6 +188,11 @@ footer {
 
 .input-field::-webkit-input-placeholder {
     color: white;
+}
+
+.empty-cart > td {
+    color: red;
+    font-weight: bold;
 }
 
 
