@@ -6,22 +6,22 @@ app.config(function($routeProvider){
     $routeProvider
         .when('/', {
             templateUrl: "landing.html",
-            controller: "landingController"
+            controller: "mainCtrl"
         })
         .when('/about', {
             templateUrl: "about.html",
-            controller: "aboutController"
+            controller: "mainCtrl"
         })
         .when('/contact', {
             templateUrl: "contact.html",
-            controller: "landingController"
+            controller: "mainCtrl"
         })
         .otherwise({
             redirectTo: '/'
         });
 });
 
-app.controller('landingController', function($scope){
+app.controller('mainCtrl', function($scope){
     $scope.items = [];
     var empty_cart = $(".empty-cart");
     var item_name = $('.item-name');
@@ -47,6 +47,9 @@ app.controller('landingController', function($scope){
         }
 
         $scope.items.push(item_obj);
+        localStorage.shoppingCart = $scope.items;
+        $('#item-name').html = localStorage.shoppingCart;
+
 
         item_name.attr("placeholder", "What Else Do You Need?");
         $('.item-name, .item-qty').css({
@@ -64,4 +67,3 @@ app.controller('landingController', function($scope){
     };
 
 });
-

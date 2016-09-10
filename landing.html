@@ -3,17 +3,17 @@
         <tr>
             <th class="items">Item Name</th>
             <th class="cost">Qty.</th>
-            <th class="quantity">Est. Cost Per Item</th>
-            <th class="totalcost">Est. Total Cost</th>
+            <!--<th class="quantity">Est. Cost Per Item</th>-->
+            <!--<th class="totalcost">Est. Total Cost</th>-->
         </tr>
         <tr class="empty-cart">
             <td>Your shopping cart is empty. Please add an valid item and quantity below. </td>
         </tr>
         <tr  data-ng-repeat="item in items">
-            <td>{{ item.name }}</td>
-            <td>{{ item.qty }}</td>
-            <td></td>
-            <td></td>
+            <td id="item-name">{{ item.name }}</td>
+            <td id="item-qty">{{ item.qty }}</td>
+            <!--<td></td>-->
+            <!--<td></td>-->
             <td class="cancel">
                 <div ng-click="removeItem(item)">
                     <i class="fa fa-times" aria-hidden="true"></i>

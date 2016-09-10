@@ -147,12 +147,12 @@ table * {
 }
 
 .items {
-    width: 70%;
+    width: 85%;
     border-bottom: 1px solid #aeaeae;
 }
 
 .quantity, .cost, .totalcost, .remove {
-    width: 10%;
+    width: 15%;
     border-bottom: 1px solid #aeaeae;
 }
 
@@ -169,6 +169,10 @@ table * {
     border-radius: 5%;
     background-color: #1fb9de;
     font-size: 1em;
+}
+
+button:hover {
+    box-shadow: inset 0 0 0 25px #53a7ea;
 }
 
 button:active {
