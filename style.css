@@ -236,8 +236,9 @@ footer {
     }
 
     #logo {
-        width: 225px;
-        height: 65px;
+        width: 311px;
+        height: 85px;
+        transform: translate(-53%,0);
     }
 
     .main-heading {
@@ -251,6 +252,10 @@ footer {
 
     .main_nav > li {
         padding: 0 5vw;
+    }
+
+    .grocery-list {
+        width: 90vw;
     }
 
     input {
