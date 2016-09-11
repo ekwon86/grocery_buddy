@@ -11,18 +11,40 @@ body {
     height: 100%;
     padding-bottom:120px;
     font-family: 'Quicksand', serif;
-    /*background: url('images/background.jpg') no-repeat;*/
-    background-color: #e68700;
-    background-size: 100%;
 }
 
-/*.main-heading {*/
+.img-container {
+    background-image: url('images/background.jps.jpg');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -999;
+    -webkit-filter: blur(8px);
+    -o-filter: blur(8px);
+    filter: blur(8px);
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='70');
+    background-size: cover;
+}
+
+/*.blur {*/
+    /*!* All the background image supports *!*/
+    /*background-image: -webkit-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);*/
+    /*background-image: -moz-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);*/
+    /*background-image: -o-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);*/
+    /*background-image: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);*/
+    /*position: absolute;*/
     /*width: 100%;*/
-    /*font-family: 'Pacifico', serif;*/
-    /*font-size: 50px;*/
-    /*color: white;*/
-    /*text-align: center;*/
-    /*text-shadow: 1px 1px 1px black;*/
+    /*height: 100%;*/
+    /*-webkit-filter: blur(50px);*/
+    /*-o-filter: blur(50px);*/
+    /*filter: blur(50px);*/
+    /*filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='70');*/
+    /*top: -70px;*/
+    /*right: -70px;*/
+    /*left: -70px;*/
+    /*padding: 70px;*/
 /*}*/
 
 #logo {
@@ -85,11 +107,12 @@ input {
     height: 15px;
     width: 55vw;
     color: black;
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 2%;
     padding: 4vh;
     text-align: center;
     display: inline-block;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .item-name {
@@ -112,6 +135,7 @@ input {
     position: relative;
     left: 50%;
     transform: translate(-50%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .cancel {
@@ -143,7 +167,7 @@ table * {
     color: black;
     text-align: left;
     padding: 1%;
-    font-size: 0.9em;
+    font-size: 15px;
 }
 
 .items {
@@ -158,17 +182,18 @@ table * {
 
 .button-container {
     width: 100%;
-    margin-top: 3vh;
+    margin-top: 1vh;
     text-align: center;
 }
 
 #additem-button {
     color: white;
-    width: 13vw;
-    height: 8vh;
+    width: 160px;
+    height: 40px;
     border-radius: 5%;
     background-color: #1fb9de;
     font-size: 1em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 button:hover {

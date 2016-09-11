@@ -27,11 +27,11 @@ app.controller('mainCtrl', function($scope){
     var item_name = $('.item-name');
     var item_qty = $('.item-qty');
 
-
     $scope.addItem = function() {
         var item_obj = {};
         item_obj.name = item_name.val();
         item_obj.qty = item_qty.val();
+
 
         empty_cart.hide();
 
@@ -47,23 +47,26 @@ app.controller('mainCtrl', function($scope){
         }
 
         $scope.items.push(item_obj);
-        localStorage.shoppingCart = $scope.items;
-        $('#item-name').html = localStorage.shoppingCart;
-
 
         item_name.attr("placeholder", "What Else Do You Need?");
         $('.item-name, .item-qty').css({
-                "background-color": "white"})
-            .removeClass('input-field').val('').first().focus();
+            "background-color": "white"})
+        .removeClass('input-field').val('').first().focus();
     };
 
     $scope.removeItem = function(item) {
         var index = $scope.items.indexOf(item);
         $scope.items.splice(index,1);
 
-        if ($scope.items == "") {
+        if ($scope.items.length === 0) {
             empty_cart.show();
         }
     };
 
 });
+
+
+$(document).ready(function() {
+
+});
+
